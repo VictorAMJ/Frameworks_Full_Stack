@@ -1,0 +1,60 @@
+<!--
+Atividade 2
+
+Desenvolver uma página web simples que funcione como uma Calculadora de IMC (Índice
+de Massa Corporal). A aplicação deve permitir que o usuário insira seu peso e altura, e
+calcule automaticamente o IMC com base nas informações fornecidas.
+Requisitos:
+
+HTML
+• Crie um formulário que contenha:
+‣ Um campo para o usuário inserir seu peso (em quilogramas).
+‣ Um campo para o usuário inserir sua altura (em metros).
+‣ Um botão para calcular o IMC.
+• Adicione uma área para exibir o resultado do cálculo.
+
+CSS
+• Estilize a página para torná"la visualmente atraente, incluindo:
+‣ Layout e formatação dos campos de entrada e do botão.
+‣ Cores e fontes que melhorem a legibilidade.
+
+JavaScript
+• Implemente a lógica para calcular o IMC utilizando a fórmula: IMC = peso / (altura
+* altura).
+• Classifique o resultado do IMC em categorias, como:
+‣ Abaixo do peso
+‣ Peso normal
+‣ Sobrepeso
+‣ Obesidade-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora-IMC</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="formulario">
+        <h1>Calculadora-IMC</h1>
+        <h2>Insira suas informações</h2>
+
+        <label for="peso">Peso (kg):</label>
+        <input type="number" step="0.1" name="peso" id="peso">
+        <br><br>
+
+        <label for="altura">Altura (m): </label>
+        <input type="number" step="0.01" name="altura" id="altura">
+        <br><br>
+
+        <input type="button" value="Calcular IMC" onclick="imc()"/>
+    
+        <div id="resultadoIMC"></div>
+    </div> 
+        
+    <script src="script.js"></script>
+
+</body>
+</html>
