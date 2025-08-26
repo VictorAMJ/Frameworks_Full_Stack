@@ -12,9 +12,7 @@ class UserController:
         if request.method == 'POST':
             name = request.form['name']
             email = request.form['email']
-
-            # validações simples: se usuário já existe no db, etc
-
+            
             new_user = User(name=name, email=email)
             db.session.add(new_user)
             db.session.commit()

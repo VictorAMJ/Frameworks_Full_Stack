@@ -1,0 +1,5 @@
+Dos arquivos, instance é aquele de bd que precisa de codigo eu acho.
+
+gitignore nao lembro como faz
+
+requirements eu nao lembro tambem se cria automatico ou cria e manda depois
