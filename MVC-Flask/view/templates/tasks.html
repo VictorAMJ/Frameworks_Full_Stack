@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Page</title>
+</head>
+<body>
+    <h1>Minhas Tarefas</h1>
+
+<a href="{{ url_for('create_task') }}">Criar Nova Tarefa</a>
+
+<ul>
+    {% for task in tasks %}
+    <li>
+        {{ task.title }} - {{ task.description }} - {{ task.status }} - {{ task.user.name }}
+        <form action="{{ url_for('update_task_status', task_id=task.id) }}" method="POST">
+            <button type="submit">Concluir</button>
+        </form>
+        <form action="{{ url_for('delete_task', task_id=task.id) }}" method="POST">
+            <button type="submit">Excluir</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
