@@ -32,7 +32,7 @@ def criar_tarefa(dados):
         titulo = dados["titulo"],
         descricao = dados["descricao"],
         status = dados["status"],
-        id_usuario = dados["id_status"]
+        id_usuario = dados["id_usuario"]
     )
 
     db.session.add(nova_tarefa)
@@ -58,7 +58,7 @@ def atualizar_tarefa(id_tarefa, dados_novos):
     tarefa.titulo = dados_novos["titulo"]
     tarefa.descricao = dados_novos["descricao"]
     tarefa.status = dados_novos["status"]
-    tarefa.id_usuario = dados_novos["id_usario"]
+    tarefa.id_usuario = dados_novos["id_usuario"]
 
     db.session.commit()
     return {
@@ -66,7 +66,7 @@ def atualizar_tarefa(id_tarefa, dados_novos):
         "titulo" : tarefa.titulo,
         "descricao" : tarefa.descricao,
         "status" : tarefa.status,
-        "id_usuario" : tarefa.id_usario
+        "id_usuario" : tarefa.id_usuario
     }
 
 def deletar_tarefa(id_tarefa):
