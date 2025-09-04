@@ -45,3 +45,13 @@ def atualizar_tarefa(id_tarefa):
         return jsonify({'erro': 'Tarefa não encontrada!'}), 404
     except Exception as e:
         return jsonify({'erro': f'Erro inesperado ao atualizar tarefa: {str(e)}'}), 500
+    
+@tarefas.route('/tarefas/<int:id_tarefas>', methods = ['DELETE'])
+def deletar_tarefa(id_tarefa):
+    try:
+        deletar_tarefa(id_tarefa)
+        return jsonify({'mensagem': 'Tarefa deletada com sucesso!'}), 200
+    except TarefaNaoEncontrada:
+        return jsonify({'erro': 'Tarefa não encontrada!'}), 404
+    except Exception as e:
+        return jsonify({'erro': f'Erro inesperado ao deletar tarefa: {str(e)}'}), 500
