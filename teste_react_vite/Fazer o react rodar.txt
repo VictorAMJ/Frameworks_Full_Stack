@@ -1,0 +1,70 @@
+Fazer o react rodar:
+
+obs: eu desativei a proteção do Windows pra ficar mais fácil
+
+1 - Crie uma pasta para colocar os arquivos do seu projeto
+
+2 - Iniciar o projeto e criar "package.json" -> npm init -y
+
+3 - Instalar dependências -> npm install react react-dom e npm install --save-dev vite. Isso fará aparecer o "package-lock.json" e "node modules"
+
+Opcional 3.1 - Ajustar o "package.json" para ficar +/- com essas configurações:
+
+{
+  "name": "NOME DO SEU PROJETO",
+  "version": "1.0.0",
+  "private": true, #enfase nesse, talvez não tendo essa linha ele não rode
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "vite": "^7.1.7"
+  }
+}
+
+obs: se tiver a mais no seu código, não tem problema, são adições do passo 3
+
+4 - Estrutura mínima de pastas: obs: até aqui se você não terá algumas pastas, agora crie as que faltam manualmente.
+
+NOME_DO_PROJETO/
+│── index.html
+│── package.json
+|── package-lock.json
+│── node_modules/
+└── src/
+    ├── main.jsx
+    ├── App.jsx
+    └── App.css
+
+5 - Programação do projeto, faça seus códigos e etc.
+
+6 - Rodar o projeto no terminal -> npm run dev;
+
+O Vite mostrará o endereço, geralmente:
+
+http://localhost:5173
+
+e lá estará seu projeto.
+
+
+
+
+*Resumo do fluxo*
+
+Criar pasta e iniciar npm init -y
+
+Instalar react, react-dom e vite
+
+Configurar package.json com scripts
+
+Criar index.html e src/ com main.jsx, App.jsx e App.css
+
+Rodar com npm run dev
+
+
