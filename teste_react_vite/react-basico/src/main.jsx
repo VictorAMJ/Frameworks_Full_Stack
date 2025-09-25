@@ -18,5 +18,12 @@ ReactDOM.createRoot(document.getElementById("conteudo")).render(
 
 
 
+/* 
 
+O que é: O ponto de entrada do React. É um arquivo JS/JSX que conecta o React ao HTML (index.html).
 
+Função: Ele monta a aplicação React dentro do root. É aqui que você diz “React, renderiza o <App /> nesta <div>”.
+
+Por que é necessário: Sem ele, o React não sabe onde começar a renderizar os componentes.
+
+*/

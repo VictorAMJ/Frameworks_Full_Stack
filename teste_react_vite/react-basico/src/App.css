@@ -3,3 +3,13 @@ h1 {
     margin-top: 50px;
     color: blue;
 }
+
+/*
+
+O que é: Arquivo de estilo CSS associado à aplicação ou ao componente principal.
+
+Função: Define estilos visuais (cores, margens, fontes, layout) da interface.
+
+Por que é necessário: React não inclui estilo por padrão. Para que a interface fique apresentável, você precisa de CSS.
+
+*/
