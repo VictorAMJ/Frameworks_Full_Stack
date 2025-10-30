@@ -12,3 +12,4 @@ class Livro(db.Model):
     genero = db.Column(db.String(50), nullable = False)
     disponivel = db.Column(db.Boolean, default = True)
 
+    usuario_id = db.Column(db.Integer, db.ForeignKey("usuarios.id"), nullable=False)

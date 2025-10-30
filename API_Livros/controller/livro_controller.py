@@ -6,7 +6,8 @@ def criar_livro(dados):
         autor = dados['autor'],
         ano_publicacao = dados['ano_publicacao'],
         genero = dados['genero'],
-        disponivel = dados.get('disponivel', True)
+        disponivel = dados.get('disponivel', True),
+        usuario_id = dados['usuario_id']
     )
 
     db.session.add(novo_livro)
